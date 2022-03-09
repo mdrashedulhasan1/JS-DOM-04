@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS-DOM</h1>
+    <div id="first">
+        <h2>Heading-#</h2>
+        <p>lorem50</p>
+    </div>
+    <div id="second">
+        <h2>Heading-$</h2>
+        <p>lorem50</p>
+    </div>
+    <div id="third">
+        <h2>Heading-%</h2>
+        <p>lorem50</p>
+    </div>
+    <script>
+        console.log("This is our javascript browser")
+        const allHeadings = document.getElementsByTagName('h2');
+        for(const h2 of allHeadings){
+            h2.style.textAlign= "center";
+            h2.style.backgroundColor = "gray";
+            h2.style.fontWeight = "200";
+            h2.style.color = "white";
+            h2.style.padding = "20px"
+        }
+        const allP = document.getElementsByTagName("p");
+        for(const p of allP){
+            p.style.color = "yellow";
+            p.style.textAlign = "center";
+            p.style.backgroundColor = "tomato";
+            p.style.padding = "20px";
+            p.style.fontSize = "20px";
+        }
+
+        const firstId = document.getElementById("first");
+        firstId.style.backgroundColor = "green";
+        firstId.style.padding = "20px";
+        firstId.style.border = "5px solid red";
+        firstId.style.margin = "10px";
+        firstId.style.borderRadius = "30px";
+
+        const secondId = document.getElementById("second");
+        secondId.style.backgroundColor = "yellow";
+        secondId.style.padding = "20px";
+        secondId.style.border = "5px solid red";
+        secondId.style.margin = "10px";
+        secondId.style.borderRadius = "30px";
+
+        const thirdId = document.getElementById("third");
+        thirdId.style.backgroundColor = "hotpink";
+        thirdId.style.padding = "20px";
+        thirdId.style.border = "5px solid red";
+        thirdId.style.margin = "10px";
+        thirdId.style.borderRadius = "30px";
+        
+    </script>
+</body>
+</html>
